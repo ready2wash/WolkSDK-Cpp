@@ -179,6 +179,9 @@ target_include_directories(${CONNECTIVITY_TARGET_NAME}
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/${CONNECTIVITY_SUBDIRECTORY_PATH}>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
+target_compile_options(${CONNECTIVITY_TARGET_NAME} PRIVATE ${WOLKSDK_CXX_FLAGS})
+target_compile_features(${CONNECTIVITY_TARGET_NAME} PUBLIC ${WOLKSDK_CXX_STANDARD})
+
 # Include tests if the options is enabled
 if (WOLKSDK_BUILD_TESTS)
     add_subdirectory(tests)
