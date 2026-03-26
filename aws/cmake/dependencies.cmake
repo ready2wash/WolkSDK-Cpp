@@ -2,7 +2,7 @@
 include(FetchContent)
 
 # Define the AWS version
-set(AWS_SDK_VERSION 1.8.173)
+set(AWS_SDK_VERSION 1.11.298)
 
 # Set the flags for AWS based on the CMake build type
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
