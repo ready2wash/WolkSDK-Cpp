@@ -7,8 +7,3 @@ set(WOLKSDK_CXX_FLAGS -Wall -Wextra -pedantic -pedantic-errors -Wcast-align
     -Werror=shadow -Werror=stack-protector -Wstrict-aliasing=2 -Wno-switch
     -Werror=unreachable-code -Wunused -Wvariadic-macros -Wwrite-strings
     -Werror=non-virtual-dtor -Werror=return-type)
-
-# Set the tests flags
-if (WOLKSDK_BUILD_TESTS)
-    set(WOLKSDK_CXX_FLAGS "${WOLKSDK_CXX_FLAGS} -fprofile-arcs -ftest-coverage -g")
-endif ()
