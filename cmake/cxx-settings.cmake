@@ -10,5 +10,5 @@ set(WOLKSDK_CXX_FLAGS -Wall -Wextra -pedantic -pedantic-errors -Wcast-align
 
 # Set the tests flags
 if (WOLKSDK_BUILD_TESTS)
-    set(WOLKSDK_CXX_FLAGS "${WOLKSDK_CXX_FLAGS} -fprofile-arcs -ftest-coverage -g")
+    list(APPEND WOLKSDK_CXX_FLAGS -fprofile-arcs -ftest-coverage -g)
 endif ()
